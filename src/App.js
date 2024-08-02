@@ -448,9 +448,13 @@ const handleSaveEdit = () => {
                             <span className={`p-2 rounded ${statusStyles[cell.value]}`}>
                               {cell.render('Cell')}
                             </span>
-                          ) : cell.column.id === 'payment' ? (
+                          ) : : cell.column.id === 'payment' ? (
                             <span className={`p-2 rounded ${paymentStyles[cell.value]}`}>
                               {cell.render('Cell')}
+                            </span>
+                          ) : cell.column.id === 'nominal' ? (
+                            <span className={`p-2 rounded ${paymentStyles[cell.value]}`}>
+                             Rp. {cell.render('Cell')}
                             </span>
                           ) : (
                             cell.render('Cell')
